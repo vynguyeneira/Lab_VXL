@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But not these files...
+!Exercise *.ioc
+!.gitignore
+!Debug
+!Debug/Exercise *.hex
+
+!Core
+!Core/Src
+!Core/Src/main.c
