@@ -1,2 +1,20 @@
-Pictures/
-.metadata/
+# Ignore everything
+*
+
+# But not these files...
+!Simulation_Proteus
+!Simulation_Proteus/Exercise*.pdsprj
+
+!Code_STM32
+!Code_STM32/Exercise *.ioc
+
+!Code_STM32/Exercise *
+!Code_STM32/Exercise */Debug
+!Code_STM32/Exercise */Debug/Exercise *.hex
+
+!Code_STM32/Exercise */Core
+!Code_STM32/Exercise */Core/Src
+!Code_STM32/Exercise */Core/Src/main.c
+
+!Code_STM32/Exercise */Core/Inc
+!Code_STM32/Exercise */Core/Inc/main.h
