@@ -1,0 +1,168 @@
+/*
+ * button.c
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: Vy Nguyen
+ */
+
+#include "button.h"
+
+int button_reset_flag = 0;
+int button_inc_flag = 0;
+int button_dec_flag = 0;
+
+int key_reg0 = NORMAL_STATE;
+int key_reg1 = NORMAL_STATE;
+int key_reg2 = NORMAL_STATE;
+int stable_state1 = NORMAL_STATE;
+
+int key_reg3 = NORMAL_STATE;
+int key_reg4 = NORMAL_STATE;
+int key_reg5 = NORMAL_STATE;
+int stable_state2 = NORMAL_STATE;
+
+int key_reg6 = NORMAL_STATE;
+int key_reg7 = NORMAL_STATE;
+int key_reg8 = NORMAL_STATE;
+int stable_state3 = NORMAL_STATE;
+
+int timer_for_key_reset_press = 100;
+int timer_for_key_inc_press = 300;
+int timer_for_key_dec_press = 300;
+
+int isButtonResetPressed()
+{
+    if (button_reset_flag == 1)
+    {
+        button_reset_flag = 0;
+        return 1;
+    }
+    return 0;
+}
+int isButtonIncPressed()
+{
+    if (button_inc_flag == 1)
+    {
+        button_inc_flag = 0;
+        return 1;
+    }
+    return 0;
+}
+int isButtonDecPressed()
+{
+    if (button_dec_flag == 1)
+    {
+        button_dec_flag = 0;
+        return 1;
+    }
+    return 0;
+}
+
+void subKeyResetProcess()
+{
+    button_reset_flag = 1;
+}
+void subKeyIncProcess()
+{
+    button_inc_flag = 1;
+}
+void subKeyDecProcess()
+{
+    button_dec_flag = 1;
+}
+
+void getKeyInputReset()
+{
+    key_reg0 = key_reg1;
+    key_reg1 = key_reg2;
+    key_reg2 = HAL_GPIO_ReadPin(RESET_GPIO_Port, RESET_Pin);
+    if ((key_reg0 == key_reg1) && (key_reg1 == key_reg2))
+    {
+        if (key_reg2 != stable_state1)
+        {
+            stable_state1 = key_reg2;
+
+            if (key_reg2 == PRESSED_STATE)
+            {
+                subKeyResetProcess();
+                timer_for_key_reset_press = 300;
+            }
+        }
+        else
+        {
+            timer_for_key_reset_press--;
+            if (timer_for_key_reset_press == 0)
+            {
+                if (key_reg2 == PRESSED_STATE)
+                {
+                    subKeyResetProcess();
+                }
+                timer_for_key_reset_press = 100;
+            }
+        }
+    }
+}
+void getKeyInputInc()
+{
+    key_reg3 = key_reg4;
+    key_reg4 = key_reg5;
+    key_reg5 = HAL_GPIO_ReadPin(INC_GPIO_Port, INC_Pin);
+    if ((key_reg3 == key_reg4) && (key_reg4 == key_reg5))
+    {
+        if (key_reg5 != stable_state2)
+        {
+            stable_state2 = key_reg5;
+
+            if (key_reg5 == PRESSED_STATE)
+            {
+                subKeyIncProcess();
+                timer_for_key_inc_press = 300;
+            }
+        }
+        else
+        {
+            timer_for_key_inc_press--;
+            if (timer_for_key_inc_press == 0)
+            {
+                if (key_reg5 == PRESSED_STATE)
+                {
+                    subKeyIncProcess();
+                }
+                timer_for_key_inc_press = 100;
+            }
+        }
+    }
+}
+void getKeyInputDec()
+{
+    key_reg6 = key_reg7;
+    key_reg7 = key_reg8;
+    key_reg8 = HAL_GPIO_ReadPin(DEC_GPIO_Port, DEC_Pin);
+    if ((key_reg6 == key_reg7) && (key_reg7 == key_reg8))
+    {
+        if (key_reg8 != stable_state3)
+        {
+            stable_state3 = key_reg8;
+
+            if (key_reg8 == PRESSED_STATE)
+            {
+                subKeyDecProcess();
+                timer_for_key_dec_press = 300;
+            }
+        }
+        else
+        {
+            timer_for_key_dec_press--;
+            if (timer_for_key_dec_press == 0)
+            {
+                if (key_reg8 == PRESSED_STATE)
+                {
+                    subKeyDecProcess();
+                }
+                timer_for_key_dec_press = 100;
+            }
+        }
+    }
+}
+
+

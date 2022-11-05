@@ -1,0 +1,4 @@
+softwareTimer.c:19:6:setTimer1ForLed	16	static
+softwareTimer.c:24:6:setTimer2ForAutoCountDown	16	static
+softwareTimer.c:29:6:setTimer3ForTimeOut	16	static
+softwareTimer.c:34:6:timerRun	4	static
