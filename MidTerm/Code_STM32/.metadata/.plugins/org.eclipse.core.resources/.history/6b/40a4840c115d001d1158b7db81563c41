@@ -1,0 +1,25 @@
+/*
+ * softwareTimer.c
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: Vy Nguyen
+ */
+
+#include "softwareTimer.h"
+
+int timer1_counter_for_led = 0;
+int timer1_flag_for_led = 0;
+
+void setTimer1ForLed(int duration){
+	timer1_counter_for_led = duration;
+	timer1_flag_for_led = 0;
+}
+
+void timerRun(){
+	if (timer1_counter_for_led > 0){
+		timer1_counter_for_led --;
+		if(timer1_counter_for_led <= 0){
+			timer1_flag_for_led = 1;
+		}
+	}
+}

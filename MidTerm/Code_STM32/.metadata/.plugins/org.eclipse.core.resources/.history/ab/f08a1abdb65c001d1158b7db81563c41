@@ -1,0 +1,10 @@
+/*
+ * softwareTimer.c
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: Vy Nguyen
+ */
+
+#include "softwareTimer.h"
+
+int

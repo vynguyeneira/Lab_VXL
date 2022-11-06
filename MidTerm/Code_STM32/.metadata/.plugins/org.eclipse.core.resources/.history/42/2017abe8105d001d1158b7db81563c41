@@ -1,0 +1,17 @@
+/*
+ * softwareTimer.h
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: Vy Nguyen
+ */
+
+#ifndef INC_SOFTWARETIMER_H_
+#define INC_SOFTWARETIMER_H_
+
+extern int timer1_flag_for_led;
+
+void setTimer1ForLed(int duration);
+
+void timerRun();
+
+#endif /* INC_SOFTWARETIMER_H_ */

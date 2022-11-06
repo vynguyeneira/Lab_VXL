@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="timer_for_key_dec_press"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="TimeForKeyPress3"/>
+			<item value="TimeForKeyPress2"/>
+			<item value="TimeForKeyPress1"/>
+			<item value="KeyReg1"/>
+			<item value="KeyReg10"/>
+			<item value="KeyReg9"/>
+			<item value="KeyReg8"/>
+			<item value="KeyReg6"/>
+			<item value="KeyReg5"/>
+			<item value="KeyReg4"/>
+			<item value="KeyReg2"/>
+			<item value="KeyReg11"/>
+			<item value="KeyReg7"/>
+			<item value="KeyReg3"/>
+			<item value="KeyReg0"/>
+		</list>
+		<list key="replacehistory">
+			<item value="timer_for_key_dec_press"/>
+			<item value="timer_for_key_inc_press"/>
+			<item value="timer_for_key_reset_press"/>
+			<item value="key_reg1"/>
+			<item value="key_reg8"/>
+			<item value="key_reg7"/>
+			<item value="key_reg6"/>
+			<item value="key_reg5"/>
+			<item value="key_reg4"/>
+			<item value="key_reg3"/>
+			<item value="key_reg2"/>
+			<item value="stable_state3"/>
+			<item value="stable_state2"/>
+			<item value="stable_state1"/>
+			<item value="key_reg0"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="801"/>
+		<item key="DIALOG_Y_ORIGIN" value="217"/>
+		<item key="DIALOG_WIDTH" value="336"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>
