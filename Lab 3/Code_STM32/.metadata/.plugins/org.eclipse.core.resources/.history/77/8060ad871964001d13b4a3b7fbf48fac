@@ -1,0 +1,37 @@
+/*
+ * fsm_automatic_mode1_run.c
+ *
+ *  Created on: Nov 14, 2022
+ *      Author: Vy Nguyen
+ */
+
+#include "fsm_automatic_mode1_run.h"
+#include "global.h"
+
+void fsm_automatic_mode1_run(){
+//	if(timer4_flag == 1){
+//		updateClockBuffer();
+//		setTimer4(1000);
+//	}
+//
+//	if(timer3_flag == 1){
+//		update7SEG(index_led);
+//		setTimer3(125);
+//	}
+
+	switch(status){
+		case MODE_1:
+			break;
+		case RED_GREEN:
+			break;
+		case RED_YELLOW:
+			break;
+		case GREEN_RED:
+			break;
+		case YELLOW_RED:
+			break;
+		default:
+			break;
+
+	}
+}

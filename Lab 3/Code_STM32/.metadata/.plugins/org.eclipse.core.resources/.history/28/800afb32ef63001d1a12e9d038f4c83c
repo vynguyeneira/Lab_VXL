@@ -1,0 +1,30 @@
+/*
+ * global.h
+ *
+ *  Created on: Nov 14, 2022
+ *      Author: Vy Nguyen
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+#include "software_timer.h"
+#include "button.h"
+
+#define RED_GREEN 		1
+#define RED_YELLOW		2
+#define GREEN_RED		3
+#define YELLOW_RED		4
+
+#define MODE_1			10
+#define MODE_2			20
+#define MODE_3			30
+#define MODE_4			40
+
+#define LED_RED_ANIMATION 		100
+#define LED_YELLOW_ANIMATION	200
+#define LED_GREEN_ANIMATION		300
+
+
+
+#endif /* INC_GLOBAL_H_ */

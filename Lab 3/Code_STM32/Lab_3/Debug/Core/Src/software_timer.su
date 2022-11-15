@@ -1,0 +1,11 @@
+software_timer.c:27:6:setTimer1ForTrafficLight	16	static
+software_timer.c:32:6:setTimer2ForEn7seg	16	static
+software_timer.c:37:6:setTimer3ForDisplay	16	static
+software_timer.c:42:6:setTimer4For7segFollowMode	16	static
+software_timer.c:47:6:setTimer5ForToggle	16	static
+software_timer.c:52:6:resetTimer1ForTrafficLight	4	static
+software_timer.c:57:6:resetTimer2ForEn7seg	4	static
+software_timer.c:62:6:resetTimer3ForDisplay	4	static
+software_timer.c:67:6:resetTimer4For7segFollowMode	4	static
+software_timer.c:72:6:resetTimer5ForToggle	4	static
+software_timer.c:77:6:timerRun	4	static

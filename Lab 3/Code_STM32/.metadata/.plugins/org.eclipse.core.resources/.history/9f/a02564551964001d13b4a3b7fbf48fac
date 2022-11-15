@@ -1,0 +1,12 @@
+/*
+ * fsm_automatic_mode1_run.c
+ *
+ *  Created on: Nov 14, 2022
+ *      Author: Vy Nguyen
+ */
+
+#include "fsm_automatic_mode1_run.h"
+
+void fsm_automatic_mode1_run(){
+
+}

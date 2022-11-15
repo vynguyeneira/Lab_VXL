@@ -1,0 +1,43 @@
+/*
+ * fsm_automatic_mode1_run.c
+ *
+ *  Created on: Nov 14, 2022
+ *      Author: Vy Nguyen
+ */
+
+#include "fsm_automatic_mode1_run.h"
+#include "global.h"
+
+void fsm_automatic_mode1_run(){
+//	if(timer4_flag == 1){
+//		updateClockBuffer();
+//		setTimer4(1000);
+//	}
+//
+//	if(timer3_flag == 1){
+//		update7SEG(index_led);
+//		setTimer3(125);
+//	}
+
+	switch(status){
+		case MODE_1:
+			HAL_GPIO_WritePin ( LED_RED_1_3_GPIO_Port , LED_RED_1_3_Pin , GPIO_PIN_SET ) ;
+			HAL_GPIO_WritePin ( LED_YELLOW_1_3_GPIO_Port , LED_YELLOW_1_3_Pin , GPIO_PIN_SET) ;
+			HAL_GPIO_WritePin ( LED_GREEN_1_3_GPIO_Port , LED_GREEN_1_3_Pin , GPIO_PIN_SET) ;
+			HAL_GPIO_WritePin ( LED_RED_2_4_GPIO_Port , LED_RED_2_4_Pin , GPIO_PIN_SET ) ;
+			HAL_GPIO_WritePin ( LED_YELLOW_2_4_GPIO_Port , LED_YELLOW_2_4_Pin , GPIO_PIN_SET) ;
+			HAL_GPIO_WritePin ( LED_GREEN_2_4_GPIO_Port , LED_GREEN_2_4_Pin , GPIO_PIN_SET) ;
+			break;
+		case RED_GREEN:
+			break;
+		case RED_YELLOW:
+			break;
+		case GREEN_RED:
+			break;
+		case YELLOW_RED:
+			break;
+		default:
+			break;
+
+	}
+}

@@ -1,0 +1,27 @@
+/*
+ * fsm.c
+ *
+ *  Created on: Nov 14, 2022
+ *      Author: Vy Nguyen
+ */
+
+#include "fsm.h"
+
+void fsm_run(){
+	switch(status){
+		case MODE_2:
+			break;
+		case LED_RED_ANIMATION:
+			break;
+		case MODE_3:
+			break;
+		case LED_YELLOW_ANIMATION:
+			break;
+		case MODE_4:
+			break;
+		case LED_GREEN_ANIMATION:
+			break;
+		default:
+			break;
+	}
+}

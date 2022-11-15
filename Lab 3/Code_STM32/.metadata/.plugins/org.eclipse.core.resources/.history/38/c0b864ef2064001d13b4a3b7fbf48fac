@@ -1,0 +1,16 @@
+/*
+ * fsm.c
+ *
+ *  Created on: Nov 14, 2022
+ *      Author: Vy Nguyen
+ */
+
+#include "fsm.h"
+
+void fsm_run(){
+	switch(status){
+		case MODE_2:
+
+	}
+
+}

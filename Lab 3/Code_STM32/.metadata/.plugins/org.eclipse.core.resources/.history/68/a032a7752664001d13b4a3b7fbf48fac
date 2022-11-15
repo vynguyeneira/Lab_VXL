@@ -1,0 +1,41 @@
+/*
+ * fsm.c
+ *
+ *  Created on: Nov 14, 2022
+ *      Author: Vy Nguyen
+ */
+
+#include "fsm.h"
+
+void fsm_run(){
+	switch(status){
+		case MODE_2:
+			resetTimer1ForTrafficLight();
+			resetTimer2ForEn7seg();
+			resetTimer3ForDisplay();
+
+			HAL_GPIO_WritePin ( LED_YELLOW_1_3_GPIO_Port , LED_YELLOW_1_3_Pin , GPIO_PIN_SET);
+			HAL_GPIO_WritePin ( LED_GREEN_1_3_GPIO_Port , LED_GREEN_1_3_Pin , GPIO_PIN_SET);
+			HAL_GPIO_WritePin ( LED_YELLOW_2_4_GPIO_Port , LED_YELLOW_2_4_Pin , GPIO_PIN_SET);
+			HAL_GPIO_WritePin ( LED_GREEN_2_4_GPIO_Port , LED_GREEN_2_4_Pin , GPIO_PIN_SET);
+
+			if(timer5_flag_for_toggle == 1){
+				HAL_GPIO_TogglePin(LED_GREEN_1_3_GPIO_Port, LED_GREEN_1_3_Pin);
+				HAL_GPIO_Toggle(LED_GREEN_2_4_GPIO_Port, LED_GREEN_2_4_Pin);
+				setTimer5ForToggle(50);
+			}
+			break;
+		case LED_RED_ANIMATION:
+			break;
+		case MODE_3:
+			break;
+		case LED_YELLOW_ANIMATION:
+			break;
+		case MODE_4:
+			break;
+		case LED_GREEN_ANIMATION:
+			break;
+		default:
+			break;
+	}
+}

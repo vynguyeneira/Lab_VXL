@@ -1,0 +1,67 @@
+/*
+ * software_timer.c
+ *
+ *  Created on: Nov 14, 2022
+ *      Author: Vy Nguyen
+ */
+
+#include "software_timer.h"
+
+int timer1_counter_for_traffic_light = 0;
+int timer1_flag_for_traffic_light = 0;
+
+int timer2_counter_for_en_7seg = 0;
+int timer2_flag_for_en_7seg = 0;
+
+int timer3_counter_for_display = 0;
+int timer3_flag_for_display = 0;
+
+/////////////////////////
+void setTimer1ForTrafficLight(int duration){
+	timer1_counter_for_traffic_light = duration;
+	timer1_flag_for_traffic_light = 0;
+}
+
+void setTimer2ForEn7seg(int duration){
+	timer2_counter_for_en_7seg = duration;
+	timer2_flag_for_en_7seg = 0;
+}
+
+void setTimer3ForDisplay(int duration){
+	timer3_counter_for_display = duration;
+	timer3_flag_for_display = 0;
+}
+
+///////////////////////////////
+void resetTimer1ForTrafficLight(){
+	timer1_counter_for_traffic_light = 0;
+	timer1_flag_for_traffic_light = 0;
+}
+
+void resetTimer2ForEn7seg(){
+	timer2_counter_for_en_7seg = 0;
+	timer2_flag_for_en_7seg = 0;
+}
+
+void resetTimer3ForDisplay(){
+	timer3_counter_for_display = 0;
+	timer3_flag_for_display = 0;
+}
+//////////////////////////////
+void timerRun(){
+	if (timer1_counter_for_traffic_light > 0){
+		timer1_counter_for_traffic_light--;
+		if(timer1_counter_for_traffic_light == 0){
+			timer1_flag_for_traffic_light = 1;
+		}
+	}
+
+	if(timer2_counter_for_en_7seg > 0){
+		timer2_counter_for_en_7seg--;
+		if(timer2_counter_for_en_7seg == 0){
+			timer2_flag_for_en_7seg = 1;
+		}
+	}
+
+
+}

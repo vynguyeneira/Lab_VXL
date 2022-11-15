@@ -1,0 +1,26 @@
+/*
+ * software_timer.c
+ *
+ *  Created on: Nov 14, 2022
+ *      Author: Vy Nguyen
+ */
+
+#include "software_timer.h"
+
+int timer1_counter_for_traffic_light = 0;
+int timer1_flag_for_traffic_light = 0;
+
+void setTimer1ForTrafficLight(int duration){
+	timer1_counter_for_traffic_light = duration;
+	timer1_flag_for_traffic_light = 0;
+}
+
+
+void timerRun(){
+	if (timer1_counter_for_traffic_light > 0){
+		timer1_counter_for_traffic_light--;
+		if(timer1_counter_for_traffic_light == 0){
+			timer1_flag_for_traffic_light = 1;
+		}
+	}
+}

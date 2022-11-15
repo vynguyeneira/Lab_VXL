@@ -1,0 +1,37 @@
+/*
+ * software_timer.h
+ *
+ *  Created on: Nov 14, 2022
+ *      Author: Vy Nguyen
+ */
+
+#ifndef INC_SOFTWARE_TIMER_H_
+#define INC_SOFTWARE_TIMER_H_
+
+extern int timer1_flag_for_traffic_light;
+extern int timer2_flag_for_en_7seg;
+extern int timer3_flag_for_display;
+extern int timer4_flag_for_7seg_follow_mode;
+extern int timer5_flag_for_toggle;
+
+
+void setTimer1ForTrafficLight(int duration);
+void setTimer2ForEn7seg(int duration);
+void setTimer3ForDisplay(int duration);
+void setTimer4For7segFollowMode(int duration);
+void setTimer5ForToggle(int duration);
+
+
+void resetTimer1ForTrafficLight();
+void resetTimer2ForEn7seg();
+void resetTimer3ForDisplay();
+void resetTimer4For7segFollowMode();
+void resetTimer5ForToggle();
+
+void timerRun();
+
+
+#endif /* INC_SOFTWARE_TIMER_H_ */
+
+
+
